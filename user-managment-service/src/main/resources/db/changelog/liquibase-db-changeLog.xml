@@ -1,0 +1,73 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="Manish.Mourya (generated)" id="1618226888764-1">
+        <createTable tableName="hibernate_sequence">
+            <column name="next_val" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Manish.Mourya (generated)" id="1618226888764-2">
+        <createTable tableName="user">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="datetime(6)"/>
+            <column name="created_by" type="VARCHAR(250)"/>
+            <column name="updated_at" type="datetime(6)"/>
+            <column name="updated_by" type="VARCHAR(250)"/>
+            <column name="access_key" type="VARCHAR(255)"/>
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enabled" type="BIT(1)"/>
+            <column name="first_name" type="VARCHAR(255)"/>
+            <column name="first_time_logged_in" type="datetime(6)"/>
+            <column name="last_name" type="VARCHAR(255)"/>
+            <column name="last_time_logged_in" type="datetime(6)"/>
+            <column name="last_time_password_changed" type="datetime(6)"/>
+            <column name="locked" type="BIT(1)"/>
+            <column name="password" type="VARCHAR(255)"/>
+            <column name="type" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Manish.Mourya (generated)" id="1618226888764-3">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="user"/>
+    </changeSet>
+    <changeSet author="Manish.Mourya (generated)" id="1618226888764-4">
+        <addUniqueConstraint columnNames="email" constraintName="UK_ob8kqyqqgmefl0aco34akdtpe" tableName="user"/>
+    </changeSet>
+    <changeSet author="Manish.Mourya (generated)" id="1618227482272-1">
+        <createTable tableName="hibernate_sequence">
+            <column name="next_val" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Manish.Mourya (generated)" id="1618227482272-2">
+        <createTable tableName="user">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="datetime(6)"/>
+            <column name="created_by" type="VARCHAR(250)"/>
+            <column name="updated_at" type="datetime(6)"/>
+            <column name="updated_by" type="VARCHAR(250)"/>
+            <column name="access_key" type="VARCHAR(255)"/>
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enabled" type="BIT(1)"/>
+            <column name="first_name" type="VARCHAR(255)"/>
+            <column name="first_time_logged_in" type="datetime(6)"/>
+            <column name="last_name" type="VARCHAR(255)"/>
+            <column name="last_time_logged_in" type="datetime(6)"/>
+            <column name="last_time_password_changed" type="datetime(6)"/>
+            <column name="locked" type="BIT(1)"/>
+            <column name="password" type="VARCHAR(255)"/>
+            <column name="type" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Manish.Mourya (generated)" id="1618227482272-3">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="user"/>
+    </changeSet>
+    <changeSet author="Manish.Mourya (generated)" id="1618227482272-4">
+        <addUniqueConstraint columnNames="email" constraintName="UK_ob8kqyqqgmefl0aco34akdtpe" tableName="user"/>
+    </changeSet>
+</databaseChangeLog>
